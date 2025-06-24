@@ -1,0 +1,16 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+// Function to get AI energy-saving tip
+string getAITip(double hoursPerDay, const string& applianceName) {
+    if (hoursPerDay > 4) { // if else, if hours > 4 then the AI Tip suggested is to use during off-peak hours to save energy
+        return "Try using your " + applianceName + " during off-peak hours to save energy.";
+    } else if (hoursPerDay < 2) { // else if hours < 2 AI Tip suggested is they are managing their energy well
+        return "Great usage! You're already managing your energy well.";
+    } else {
+        return "Consider using energy-saving settings for better efficiency.";
+    }
+}
+
