@@ -36,4 +36,14 @@ int main() {
     double monthlyCost = dailyEnergyKWh * 30 * RATE_PER_KWH; //Monthly Cost (RM)
     double monthlyCO2 = dailyEnergyKWh * 30 * CO2_PER_KWH; //Monthly CO2 (kg)
     string tip = getAITip(hoursPerDay, applianceName);
+
+    // Output results 
+    cout << fixed << setprecision(2);
+    cout << "\n--- Calculation Results ---\n";
+    cout << "Appliance: " << applianceName << endl;
+    cout << "Daily Energy Usage: " << dailyEnergyKWh << " kWh" << endl;
+    cout << "Estimated Monthly Cost: RM " << monthlyCost << endl;
+    cout << "Estimated Monthly CO2 Emissions: " << monthlyCO2 << " kg" << endl;
+
+    cout << "\nAI Energy Tip:\n" << tip << endl;
 }
