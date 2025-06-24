@@ -46,4 +46,11 @@ int main() {
     cout << "Estimated Monthly CO2 Emissions: " << monthlyCO2 << " kg" << endl;
 
     cout << "\nAI Energy Tip:\n" << tip << endl;
+// General energy tips
+    cout << "\n--- General Energy Saving Tips ---\n";
+    cout << "- Peak Hours: Avoid using high-power appliances from 7-10 PM.\n";
+    cout << "- Smart Scheduling: Use timers or smart plugs to control usage.\n";
+    cout << "- Energy Efficiency: Choose ENERGY STAR certified appliances.\n";
+
+    return 0;
 }
