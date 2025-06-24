@@ -13,4 +13,27 @@ string getAITip(double hoursPerDay, const string& applianceName) {
         return "Consider using energy-saving settings for better efficiency.";
     }
 }
+int main() {
+    string applianceName; //declare variable
+    double powerWatts = 0.0, hoursPerDay = 0.0;
 
+    const double RATE_PER_KWH = 0.50;        // RM per kWh
+    const double CO2_PER_KWH = 0.276;        // kg CO2 per kWh
+
+    cout << "=== Smart Living Energy Calculator ===\n\n";
+
+    cout << "Enter Appliance Name: "; //device name
+    getline(cin, applianceName);
+
+    cout << "Enter Power Rating (Watts): "; //device power
+    cin >> powerWatts;
+
+    cout << "Enter Hours Used Per Day: "; //how long the device is used per day
+    cin >> hoursPerDay;
+
+    // Calculations
+    double dailyEnergyKWh = (powerWatts * hoursPerDay) / 1000.0; //Daily Energy (kWh)
+    double monthlyCost = dailyEnergyKWh * 30 * RATE_PER_KWH; //Monthly Cost (RM)
+    double monthlyCO2 = dailyEnergyKWh * 30 * CO2_PER_KWH; //Monthly CO2 (kg)
+    string tip = getAITip(hoursPerDay, applianceName);
+}
