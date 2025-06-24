@@ -1,16 +1,15 @@
 {
   "version": "0.2.0",
   "configurations": [
-
-
+    
     {
       "name": "Debug Code",
       "type": "cppdbg",
       "request": "launch",
-      "program": "$LDCW6123_Project_DC1_MARISSA_243UT2457Y/EnergyCalculator.exe",
+      "program": "${workspaceFolder}/Code.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "$LDCW6123_Project_DC1_MARISSA_243UT2457Y",
+      "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": true,
       "MIMode": "gdb",
@@ -23,6 +22,6 @@
         }
       ],
       "preLaunchTask": "build and run"
-}
-]
+    }
+  ]
 }
