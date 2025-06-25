@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include <cstdlib>
+#include <limits>
 using namespace std;
 
 // Function to get AI energy-saving tip
@@ -34,15 +35,14 @@ int main() {
     while (!(cin >> powerWatts)) {
         cout << "Invalid input!Please enter numbers only: ";
         cin.clear(); // Clear error flag on cin input
-        cin.ignore(); // clear input buffer
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear input buffer
     }
 
     cout << "Enter Hours Used Per Day: "; //how long the device is used per day
-    cin >> hoursPerDay;
     while (!(cin >> hoursPerDay)) {
         cout << "Invalid input!Please enter numbers only: ";
         cin.clear(); // Clear error flag on cin input
-        cin.ignore(); // clear input buffer
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear input buffer
     }
 
     // Calculations
@@ -77,7 +77,7 @@ int main() {
             
             if (proceed =='Y' || proceed == 'y'){
                 system("cls");// clear screen
-                cin.ignore();// clear input buffer
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');// clear input buffer
 
             }
     }while(proceed == 'Y' || proceed == 'y'); // loop if user enter Y or y
