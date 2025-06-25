@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "Run EnergyCalculator",
-      "type": "cppdbg",
+      "type": "cppvsdbg",
       "request": "launch",
       "program": "${workspaceFolder}/EnergyCalculator",
       "args": [],
