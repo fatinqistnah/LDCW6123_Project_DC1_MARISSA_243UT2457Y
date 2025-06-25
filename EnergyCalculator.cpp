@@ -29,11 +29,21 @@ int main() {
     cout << "Enter Appliance Name: "; //device name
     getline (cin, applianceName);
 
+    
     cout << "Enter Power Rating (Watts): "; //device power
-    cin >> powerWatts;
+    while (!(cin >> powerWatts)) {
+        cout << "Invalid input!Please enter numbers only: ";
+        cin.clear(); // Clear error flag on cin input
+        cin.ignore(); // clear input buffer
+    }
 
     cout << "Enter Hours Used Per Day: "; //how long the device is used per day
     cin >> hoursPerDay;
+    while (!(cin >> hoursPerDay)) {
+        cout << "Invalid input!Please enter numbers only: ";
+        cin.clear(); // Clear error flag on cin input
+        cin.ignore(); // clear input buffer
+    }
 
     // Calculations
     double dailyEnergyKWh = (powerWatts * hoursPerDay) / 1000.0; //Daily Energy (kWh)
@@ -66,7 +76,7 @@ int main() {
             } while (proceed != 'Y' && proceed != 'y' && proceed != 'N' && proceed != 'n');
             
             if (proceed =='Y' || proceed == 'y'){
-                system("clear");// clear screen
+                system("cls");// clear screen
                 cin.ignore();// clear input buffer
 
             }
