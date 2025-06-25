@@ -66,7 +66,7 @@ int main() {
             } while (proceed != 'Y' && proceed != 'y' && proceed != 'N' && proceed != 'n');
             
             if (proceed =='Y' || proceed == 'y'){
-                system("CLS");// clear screen
+                system("cls");// clear screen
                 cin.ignore();// clear input buffer
 
             }
