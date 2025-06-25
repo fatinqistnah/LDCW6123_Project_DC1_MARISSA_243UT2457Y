@@ -77,8 +77,7 @@ int main() {
             
             if (proceed =='Y' || proceed == 'y'){
                 system("cls");// clear screen
-                cin.ignore(numeric_limits<streamsize>::max(), '\n');// clear input buffer
-
+                cin.ignore();// clear input buffer
             }
     }while(proceed == 'Y' || proceed == 'y'); // loop if user enter Y or y
     return 0;
