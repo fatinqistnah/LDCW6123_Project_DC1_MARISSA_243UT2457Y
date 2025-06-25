@@ -5,7 +5,7 @@
       "name": "Run EnergyCalculator",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/EnergyCalculator.exe",
+      "program": "${workspaceFolder}/EnergyCalculator",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
